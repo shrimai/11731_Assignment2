@@ -12,13 +12,13 @@ TRAIN_DATA=/home/ubuntu/11-731/data/en-de/train.en-de.low.filt
 mkdir -p $OUT_DIR
 
 # *** Train n-gram language model and create an FST
-#python $SCRIPT_DIR/train-ngram.py $TRAIN_DATA.en $OUT_DIR/ngram-fst.txt
+python $SCRIPT_DIR/train-ngram.py $TRAIN_DATA.en $OUT_DIR/ngram-fst.txt
 
 # *** Implement 1: Train IBM Model 1 and find alignment
-#python $SCRIPT_DIR/train-model1.py $TRAIN_DATA.de $TRAIN_DATA.en $OUT_DIR/alignmentv.txt
+python $SCRIPT_DIR/train-model1.py $TRAIN_DATA.de $TRAIN_DATA.en $OUT_DIR/alignmentv.txt
 
 # *** Implement 2: Extract and score phrases
-#python $SCRIPT_DIR/myphrase_extract.py $TRAIN_DATA.de $TRAIN_DATA.en $OUT_DIR/alignmentv.txt $OUT_DIR/phrase.txt
+python $SCRIPT_DIR/myphrase_extract.py $TRAIN_DATA.de $TRAIN_DATA.en $OUT_DIR/alignmentv.txt $OUT_DIR/phrase.txt
 
 # *** Implement 3: Create WFSTs for phrases
 python $SCRIPT_DIR/convert_to_wfst.py $OUT_DIR/phrase.txt $OUT_DIR/phrase-fst.txt
