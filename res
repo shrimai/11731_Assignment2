@@ -1,1 +1,0 @@
-python /home/ubuntu/11-731/assignment2/decode.py /home/ubuntu/11-731/assignment2/output/phrase-fst.fst /home/ubuntu/11-731/assignment2/output/ngram-fst.fst /home/ubuntu/11-731/assignment2/output/phrase-fst.isym /home/ubuntu/11-731/assignment2/output/ngram-fst.isym < /home/ubuntu/11-731/data/en-de/valid.en-de.low.de > /home/ubuntu/11-731/assignment2/output/valid.baseline.en
