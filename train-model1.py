@@ -105,6 +105,6 @@ print "Done with write tuple"
 no_epochs_ibm = 1
 mod_tuples = run_ibm2(source_wrds, target_wrds, all_tuples, no_epochs_ibm)
 with open(tuple_file, "w") as out:
-    pickle.dump(all_tuples, out)
-ibm2_alignments = get_alignments(source_wrds, target_wrds, all_tuples, alignment_file)
+    pickle.dump(mod_tuples, out)
+ibm2_alignments = get_alignments(source_wrds, target_wrds, mod_tuples, alignment_file)
 
